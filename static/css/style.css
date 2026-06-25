@@ -1,0 +1,1525 @@
+/*=========================================================
+        UNEB PAST PAPERS ARCHIVE
+        Professional Government Theme
+=========================================================*/
+
+:root{
+    --maroon:#6B000F;
+    --maroon-dark:#50000B;
+    --gold:#D8A21D;
+    --gold-light:#F3C94D;
+    --green:#198754;
+    --green-dark:#0F5132;
+    --white:#ffffff;
+    --light:#f5f7fb;
+    --text:#2d3436;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--text);
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    line-height:1.6;
+}
+
+/*=========================================================
+TOP BAR
+=========================================================*/
+
+.top-bar{
+    background:var(--maroon);
+    color:#fff;
+    border-bottom:3px solid var(--gold);
+    padding:14px 0;
+    font-size:.95rem;
+}
+
+.top-bar i{
+    color:var(--gold);
+    margin-right:8px;
+}
+
+.top-bar span{
+    font-weight:500;
+}
+
+/*=========================================================
+NAVBAR
+=========================================================*/
+
+.uneb-navbar{
+    background:#fff;
+    padding:18px 0;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.uneb-navbar .navbar-brand{
+    color:var(--maroon)!important;
+    font-weight:700;
+    font-size:1.45rem;
+}
+
+.uneb-navbar .navbar-brand img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.uneb-navbar .navbar-brand small{
+    display:block;
+    color:var(--gold);
+    font-size:.82rem;
+    font-weight:700;
+}
+
+.uneb-navbar .nav-link{
+    color:#333!important;
+    font-weight:600;
+    margin-left:18px;
+    transition:.3s;
+}
+
+.uneb-navbar .nav-link:hover{
+    color:var(--maroon)!important;
+}
+
+.uneb-navbar .btn{
+    background:var(--gold);
+    color:#000;
+    border:none;
+    border-radius:50px;
+    padding:10px 26px;
+    font-weight:700;
+}
+
+.uneb-navbar .btn:hover{
+    background:var(--gold-light);
+}
+
+/*=========================================================
+HOME WRAPPER
+=========================================================*/
+
+.home-wrapper{
+    width:98%;
+    max-width:1900px;
+    margin:auto;
+    padding:35px;
+}
+
+/*=========================================================
+HERO
+=========================================================*/
+
+.hero{
+    width:100%;
+    background:linear-gradient(135deg,#874519,#157347,#0F5132);
+    color:#fff;
+    border-radius:28px;
+    padding:10px 0px;
+    margin:25px auto 60px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:430px;
+    height:430px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-170px;
+    right:-150px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+    bottom:-120px;
+    left:-100px;
+}
+
+.hero img{
+    width:200px;
+    height:200px;
+    object-fit:contain;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+
+.hero img:hover{
+    transform:scale(1.08) rotate(5deg);
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:20px auto 50px;
+    font-size:1.25rem;
+    text-align:center;
+}
+
+.hero .btn{
+    padding:20px 50px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.hero .btn-light{
+    color:var(--green);
+}
+
+.hero .btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/*=========================================================
+SEARCH
+=========================================================*/
+
+.search-card{
+    width:100%;
+    background:#fff;
+    padding:50px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    margin-bottom:70px;
+}
+
+.form-control{
+    height:60px;
+    border-radius:15px;
+    border:1px solid #d9d9d9;
+}
+
+.form-control:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 .25rem rgba(216,162,29,.2);
+}
+
+.btn-success{
+    background:var(--maroon);
+    border:none;
+    border-radius:15px;
+    height:60px;
+    font-weight:700;
+}
+
+.btn-success:hover{
+    background:var(--maroon-dark);
+}
+
+/*=========================================================
+SECTION TITLES
+=========================================================*/
+
+.section-title{
+    text-align:center;
+    margin:80px 0 50px;
+}
+
+.section-title h2{
+    color:var(--maroon);
+    font-size:2.4rem;
+    font-weight:800;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/*=========================================================
+LEVEL CARDS
+=========================================================*/
+
+.level-card{
+    background:#fff;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+    padding:40px 30px;
+    height:100%;
+}
+
+.level-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.level-card i{
+    font-size:75px;
+    transition:.35s;
+}
+
+.level-card:hover i{
+    transform:scale(1.15);
+}
+
+.level-card h2{
+    color:var(--maroon);
+    margin-top:20px;
+    font-weight:700;
+}
+
+.level-card.ple{
+    border-top:6px solid #0d6efd;
+}
+
+.level-card.uce{
+    border-top:6px solid #198754;
+}
+
+.level-card.uace{
+    border-top:6px solid #6B000F;
+}
+/*=========================================================
+STATISTICS
+=========================================================*/
+
+.stat-card{
+    background:#fff;
+    border:none;
+    border-top:6px solid var(--gold);
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    min-height:240px;
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+}
+
+.stat-card h1{
+    font-size:5rem;
+    font-weight:800;
+}
+
+.stat-card i{
+    font-size:3.2rem;
+}
+
+/*=========================================================
+PAPER CARDS
+=========================================================*/
+
+.paper-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    border:none;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.paper-card:hover{
+    transform:translateY(-8px);
+}
+
+.paper-card .card-body{
+    padding:28px;
+}
+
+.paper-card h4{
+    color:var(--maroon);
+    font-weight:700;
+}
+
+.badge{
+    border-radius:30px;
+    padding:9px 15px;
+    font-size:.82rem;
+}
+
+/*=========================================================
+BUTTONS
+=========================================================*/
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/*=========================================================
+HORIZONTAL RULE
+=========================================================*/
+
+hr{
+    border-top:2px solid #ddd;
+    margin:70px 0;
+}
+
+/* ===================================
+FOOTER
+=================================== */
+
+.footer{
+
+    background:#800020;
+
+    color:#fff;
+
+    padding:45px 0 20px;
+
+    margin-top:70px;
+
+}
+
+.footer-title{
+
+    color:#f4c542;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.footer-text{
+
+    color:#f5f5f5;
+
+    line-height:1.8;
+
+    max-width:380px;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#f4c542;
+
+    padding-left:6px;
+
+}
+
+.footer p{
+
+    margin-bottom:15px;
+
+    color:#f5f5f5;
+
+}
+
+.footer i{
+
+    color:#f4c542;
+
+}
+
+.footer-line{
+
+    border-color:rgba(255,255,255,.2);
+
+    margin:30px 0 20px;
+
+}
+
+.footer-bottom{
+
+    color:#f8f9fa;
+
+    font-size:15px;
+
+}
+
+/*=========================================================
+SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--maroon);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+/*=========================================================
+RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.home-wrapper{
+    width:100%;
+    padding:20px;
+}
+
+.hero{
+    padding:70px 35px;
+}
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.hero p{
+    max-width:100%;
+    font-size:1rem;
+}
+
+.level-card{
+    margin-bottom:25px;
+}
+
+}
+
+@media(max-width:768px){
+
+.top-bar{
+    display:none;
+}
+
+.hero{
+    padding:50px 25px;
+}
+
+.hero img{
+    width:200px;
+    height:auto;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero .btn{
+    width:100%;
+    margin-bottom:12px;
+}
+
+.uneb-navbar .navbar-brand{
+    font-size:1.15rem;
+}
+
+.search-card{
+    padding:20px;
+}
+
+}
+
+/*=========================================
+DELETE PAGE
+=========================================*/
+
+.alert-danger{
+
+border-radius:15px;
+
+}
+
+.table th{
+
+background:#f8f9fa;
+width:30%;
+
+}
+
+.table td{
+
+vertical-align:middle;
+
+}
+
+/*=========================================================
+        UNEB ADMIN V2
+=========================================================*/
+
+.admin-body{
+    background:#f4f6f9;
+    font-family:'Poppins',sans-serif;
+}
+
+.admin-wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+/*=========================================================
+SIDEBAR
+=========================================================*/
+
+.sidebar{
+    width:280px;
+    background:linear-gradient(180deg,#6B000F,#4B000B);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    overflow-y:auto;
+    box-shadow:5px 0 25px rgba(0,0,0,.18);
+    z-index:999;
+}
+
+.sidebar-header{
+    text-align:center;
+    padding:35px 25px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.sidebar-logo{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.sidebar-header h4{
+    color:#fff;
+    margin-bottom:4px;
+    font-weight:700;
+}
+
+.sidebar-header p{
+    color:#d8d8d8;
+    margin:0;
+    font-size:.9rem;
+}
+
+.admin-profile{
+    display:flex;
+    align-items:center;
+    padding:22px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.profile-icon{
+    font-size:48px;
+    color:#D8A21D;
+    margin-right:15px;
+}
+
+.admin-profile strong{
+    color:#fff;
+}
+
+.admin-profile small{
+    color:#ddd;
+}
+
+/*=========================================================
+MENU
+=========================================================*/
+
+.sidebar-menu{
+    padding:18px;
+    flex:1;
+}
+
+.sidebar-menu a{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 18px;
+    margin-bottom:10px;
+    border-radius:12px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.sidebar-menu a i{
+    width:30px;
+    font-size:20px;
+}
+
+.sidebar-menu a:hover{
+    background:#D8A21D;
+    color:#000;
+    transform:translateX(6px);
+}
+
+.sidebar-menu a.active{
+    background:#D8A21D;
+    color:#000;
+    font-weight:700;
+}
+
+.sidebar-footer{
+    padding:20px;
+    color:#ddd;
+}
+
+.sidebar-footer hr{
+    border-color:rgba(255,255,255,.15);
+}
+
+/*=========================================================
+MAIN CONTENT
+=========================================================*/
+
+.main-content{
+    margin-left:280px;
+    width:calc(100% - 280px);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/*=========================================================
+TOP NAVBAR
+=========================================================*/
+
+.top-navbar{
+    background:#fff;
+    padding:22px 35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:998;
+}
+
+.top-navbar h3{
+    color:#6B000F;
+    font-weight:700;
+    margin:0;
+}
+
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.clock{
+    background:#f4f4f4;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.clock i{
+    color:#D8A21D;
+    margin-right:8px;
+}
+
+.admin-avatar{
+    background:#6B000F;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.admin-avatar i{
+    margin-right:8px;
+}
+
+/*=========================================================
+PAGE HEADER
+=========================================================*/
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.page-title{
+    font-size:2rem;
+    font-weight:700;
+    color:#6B000F;
+}
+
+/*=========================================================
+CARDS
+=========================================================*/
+
+.content-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.content-card:hover{
+    transform:translateY(-4px);
+}
+
+.card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card-header{
+    border:none;
+    font-weight:700;
+}
+
+/*=========================================================
+TABLES
+=========================================================*/
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead{
+    background:#6B000F;
+    color:#fff;
+}
+
+.table th{
+    border:none;
+    font-weight:600;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.table-hover tbody tr:hover{
+    background:#f9f3df;
+}
+
+/*=========================================================
+FORMS
+=========================================================*/
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    min-height:50px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#D8A21D;
+    box-shadow:0 0 0 .2rem rgba(216,162,29,.2);
+}
+
+/*=========================================================
+BUTTONS
+=========================================================*/
+
+.btn{
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-success{
+    background:#198754;
+    border:none;
+}
+
+.btn-primary{
+    background:#0d6efd;
+    border:none;
+}
+
+.btn-warning{
+    border:none;
+}
+
+.btn-danger{
+    border:none;
+}
+
+/*=========================================================
+FOOTER
+=========================================================*/
+
+.admin-footer{
+    margin-top:auto;
+    background:#fff;
+    border-top:1px solid #e5e5e5;
+    padding:18px 35px;
+    font-size:.9rem;
+}
+
+/*=========================================================
+SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#6B000F;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+/*=========================================================
+RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.main-content{
+    margin-left:0;
+    width:100%;
+}
+
+.top-navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.top-right{
+    width:100%;
+    justify-content:space-between;
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar-menu a{
+    padding:12px;
+}
+
+.page-title{
+    font-size:1.5rem;
+}
+
+.clock{
+    font-size:.8rem;
+}
+
+.admin-avatar{
+    font-size:.85rem;
+}
+
+.content-card{
+    padding:20px;
+}
+
+}
+
+/*=========================================================
+            PREMIUM DASHBOARD
+=========================================================*/
+
+/* Statistics Cards */
+
+.dashboard-card{
+
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+    padding:35px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+    transition:.35s;
+
+}
+
+.dashboard-card::before{
+
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-70px;
+    right:-70px;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.dashboard-card h5{
+
+    font-size:1rem;
+    opacity:.9;
+    margin-bottom:8px;
+
+}
+
+.dashboard-card h1{
+
+    font-size:3.2rem;
+    font-weight:800;
+    margin:0;
+
+}
+
+.dashboard-card i{
+
+    font-size:65px;
+    opacity:.25;
+
+}
+
+/* Gradient Colours */
+
+.bg-primary{
+
+    background:linear-gradient(135deg,#0d6efd,#0a58ca)!important;
+
+}
+
+.bg-success{
+
+    background:linear-gradient(135deg,#198754,#0f5132)!important;
+
+}
+
+.bg-warning{
+
+    background:linear-gradient(135deg,#f59e0b,#d97706)!important;
+    color:#fff!important;
+
+}
+
+.bg-danger{
+
+    background:linear-gradient(135deg,#dc3545,#842029)!important;
+
+}
+
+/* Content Cards */
+
+.content-card{
+
+    background:#fff;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.content-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.content-card h4{
+
+    color:#6B000F;
+    font-weight:700;
+    margin-bottom:20px;
+
+}
+
+/* Quick Action Buttons */
+
+.quick-btn{
+
+    padding:18px;
+    border-radius:18px;
+    text-align:center;
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.quick-btn:hover{
+
+    transform:translateY(-4px);
+    color:#fff;
+
+}
+
+.quick-btn i{
+
+    display:block;
+    font-size:40px;
+    margin-bottom:12px;
+
+}
+
+/* System Health */
+
+.health-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+
+}
+
+.health-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.health-status{
+
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#16a34a;
+    box-shadow:0 0 10px #16a34a;
+
+}
+
+/* Activity Timeline */
+
+.activity{
+
+    position:relative;
+    padding-left:30px;
+    margin-bottom:25px;
+
+}
+
+.activity::before{
+
+    content:"";
+    position:absolute;
+    left:7px;
+    top:6px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#198754;
+
+}
+
+.activity::after{
+
+    content:"";
+    position:absolute;
+    left:12px;
+    top:18px;
+    width:2px;
+    height:45px;
+    background:#ddd;
+
+}
+
+.activity:last-child::after{
+
+    display:none;
+
+}
+
+.activity strong{
+
+    color:#6B000F;
+
+}
+
+/* Recent Papers */
+
+.paper-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-radius:14px;
+    margin-bottom:15px;
+    background:#fafafa;
+    transition:.3s;
+
+}
+
+.paper-item:hover{
+
+    background:#f2f2f2;
+
+}
+
+.paper-title{
+
+    font-weight:600;
+
+}
+
+.paper-year{
+
+    color:#777;
+    font-size:.9rem;
+
+}
+
+/* Charts */
+
+.chart-card canvas{
+
+    max-height:320px;
+
+}
+
+/* Counter Animation */
+
+.counter{
+
+    transition:all .4s;
+
+}
+
+/* Glass Effect */
+
+.glass{
+
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* Progress Bars */
+
+.progress{
+
+    height:10px;
+    border-radius:30px;
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    border-radius:30px;
+
+}
+
+/* Administrator Card */
+
+.admin-card{
+
+    text-align:center;
+
+}
+
+.admin-card img{
+
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+
+}
+
+.admin-card h5{
+
+    margin-bottom:4px;
+
+}
+
+.admin-card small{
+
+    color:#777;
+
+}
+
+/* Dashboard Tables */
+
+.dashboard-table{
+
+    border-radius:18px;
+    overflow:hidden;
+
+}
+
+.dashboard-table thead{
+
+    background:#6B000F;
+    color:#fff;
+
+}
+
+/* Notification Badge */
+
+.notification{
+
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#16a34a;
+    margin-right:8px;
+
+}
+
+/* Fade Animation */
+
+.fade-up{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Pulse Animation */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ==========================
+HERO LOGO
+========================== */
+
+.hero-logo{
+
+    width:140px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 25px;
+
+    transition:0.3s ease;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* Main website width */
+
+.page-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+}
+
+/* ==========================================
+   WEBSITE CONTAINER
+========================================== */
+
+.page-container{
+
+    max-width:1300px;
+
+    margin:0 auto;
+
+    padding:0 20px;
+
+}
+
+/* ==========================================
+   GLOBAL WEBSITE WIDTH
+========================================== */
+
+.page-container{
+
+    width:100%;
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+}
+
+.main-content{
+
+    padding:30px;
+
+}
+
+/* ==========================================
+   ACCOUNT REGISTRATION CARDS
+========================================== */
+
+.account-card{
+
+    transition: all .3s ease;
+
+    cursor:pointer;
+
+}
+
+.account-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.content-card .row.g-3 > div{
+    display:flex;
+}
+
+.content-card .row.g-3 .btn{
+    width:100%;
+    height:76px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.content-card .row.g-3 .btn i{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+/*==================================
+ADMIN LOGIN BUTTON
+==================================*/
+
+.admin-btn{
+
+    background:#800020;
+
+    color:#ffffff;
+
+    border:2px solid #800020;
+
+}
+
+.admin-btn:hover{
+
+    background:#5c0017;
+
+    border-color:#5c0017;
+
+    color:#ffffff;
+
+}

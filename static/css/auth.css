@@ -1,0 +1,594 @@
+/*====================================================
+        UNEB AUTHENTICATION PAGES
+====================================================*/
+
+/*==============================
+GENERAL
+==============================*/
+
+body{
+    background:#f4f7fb;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    color:#212529;
+}
+
+.auth-page{
+
+    min-height:100vh;
+
+    padding:70px 0;
+
+    background:linear-gradient(
+        180deg,
+        #f8fbff 0%,
+        #eef3f8 50%,
+        #ffffff 100%
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*==============================
+BACKGROUND DECORATIONS
+==============================*/
+
+.auth-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(13,110,253,.04);
+
+    border-radius:50%;
+
+    top:-140px;
+
+    left:-120px;
+
+}
+
+.auth-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(25,135,84,.04);
+
+    border-radius:50%;
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+/*==============================
+HERO SECTION
+==============================*/
+
+.hero-logo{
+
+    width:90px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:15px;
+
+}
+
+.hero-title{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:#1b3558;
+
+    margin-bottom:10px;
+
+}
+
+.hero-title .text-danger{
+
+    color:#8B0000 !important;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    background:#198754;
+
+    color:#fff;
+
+    padding:9px 25px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    margin-top:10px;
+
+}
+
+.hero-heading{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-top:25px;
+
+}
+
+.hero-text{
+
+    color:#6c757d;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    max-width:650px;
+
+    margin:15px auto 0;
+
+}
+
+/*==============================
+SECTION SPACING
+==============================*/
+
+.auth-page .container{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.row.gx-5{
+
+    margin-top:25px;
+
+}
+/*====================================================
+        ACCOUNT CARDS
+====================================================*/
+
+.account-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+    border:none;
+
+}
+
+.account-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/*==============================
+CARD HEADERS
+==============================*/
+
+.student-header{
+
+    background:linear-gradient(135deg,#0d6efd,#0056d6);
+
+    text-align:center;
+
+    padding:45px 20px;
+
+}
+
+.teacher-header{
+
+    background:linear-gradient(135deg,#198754,#0d6b3d);
+
+    text-align:center;
+
+    padding:45px 20px;
+
+}
+
+.account-icon{
+
+    font-size:80px;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+}
+
+.student-header h2,
+.teacher-header h2{
+
+    color:#ffffff;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.student-header p,
+.teacher-header p{
+
+    color:rgba(255,255,255,.80);
+
+    margin-bottom:0;
+
+    font-size:16px;
+
+}
+
+/*==============================
+CARD BODY
+==============================*/
+
+.account-card .card-body{
+
+    padding:20px 22px;
+
+}
+
+/*==============================
+FEATURES
+==============================*/
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:10px 0;
+
+    margin:0;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.feature:last-child{
+
+    border-bottom:none;
+
+}
+
+.feature i{
+
+    width:40px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.feature strong{
+
+    display:block;
+
+    font-size:17px;
+
+    color:#222;
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.feature small{
+
+    display:block;
+
+    color:#6c757d;
+
+    font-size:13px;
+
+    line-height:1.3;
+
+    margin-top:2px;
+
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.account-card .btn{
+
+    width:100%;
+
+    border-radius:50px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-top:12px;
+
+}
+
+.account-card .btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-primary{
+
+    background:#0d6efd;
+
+    border-color:#0d6efd;
+
+}
+
+.btn-success{
+
+    background:#198754;
+
+    border-color:#198754;
+
+}
+/*====================================================
+        LOGIN CARD
+====================================================*/
+
+.login-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-top:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    text-align:center;
+
+}
+
+.login-card h3{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:#1b3558;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    color:#6c757d;
+
+    margin-bottom:25px;
+
+}
+
+.login-card .btn{
+
+    border-radius:50px;
+
+    padding:14px 35px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-card .btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==============================
+ADMIN NOTICE
+==============================*/
+
+.admin-note{
+
+    font-size:14px;
+
+    color:#6c757d;
+
+    line-height:1.6;
+
+}
+
+.admin-note i{
+
+    font-size:18px;
+
+}
+
+/*==============================
+SMOOTH ANIMATIONS
+==============================*/
+
+.hero-logo{
+
+    transition:.35s;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+.account-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media (max-width:991px){
+
+    .hero-title{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero-heading{
+
+        font-size:1.6rem;
+
+    }
+
+    .account-card{
+
+        margin-bottom:25px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .auth-page{
+
+        padding:40px 0;
+
+    }
+
+    .hero-logo{
+
+        width:70px;
+
+    }
+
+    .hero-title{
+
+        font-size:2rem;
+
+    }
+
+    .hero-text{
+
+        font-size:16px;
+
+    }
+
+    .student-header,
+
+    .teacher-header{
+
+        padding:35px 15px;
+
+    }
+
+    .account-icon{
+
+        font-size:65px;
+
+    }
+
+    .account-card .card-body{
+
+        padding:20px;
+
+    }
+
+    .feature{
+
+        gap:12px;
+
+    }
+
+    .feature strong{
+
+        font-size:16px;
+
+    }
+
+    .feature small{
+
+        font-size:13px;
+
+    }
+
+    .login-card{
+
+        padding:25px;
+
+    }
+
+}

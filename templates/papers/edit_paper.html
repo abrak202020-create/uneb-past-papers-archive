@@ -1,0 +1,312 @@
+```html
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+<!-- ==========================================
+PAGE HEADER
+========================================== -->
+
+<div class="d-flex justify-content-between align-items-center mb-5">
+
+    <div>
+
+        <h2 class="fw-bold text-danger">
+
+            <i class="bi bi-pencil-square"></i>
+
+            Edit Past Paper
+
+        </h2>
+
+        <p class="text-muted">
+
+            Update the information for this examination paper.
+
+        </p>
+
+    </div>
+
+    <a href="{% url 'paper_list' %}"
+       class="btn btn-outline-secondary">
+
+        <i class="bi bi-arrow-left"></i>
+
+        Back to Papers
+
+    </a>
+
+</div>
+
+<!-- ==========================================
+EDIT FORM
+========================================== -->
+
+<div class="card shadow border-0">
+
+<div class="card-body p-5">
+
+<form method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+
+<div class="row">
+
+<!-- Subject -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-book-fill text-primary"></i>
+
+Subject
+
+</label>
+
+<select
+name="subject"
+class="form-select"
+required>
+
+{% for subject in subjects %}
+
+<option value="{{ subject.id }}"
+{% if paper.subject.id == subject.id %}selected{% endif %}>
+
+{{ subject.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<!-- Year -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-calendar-event-fill text-success"></i>
+
+Year
+
+</label>
+
+<input
+type="number"
+name="year"
+value="{{ paper.year }}"
+class="form-control"
+required>
+
+</div>
+
+<!-- Paper -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-file-earmark-text-fill text-danger"></i>
+
+Paper
+
+</label>
+
+<select
+name="paper"
+class="form-select"
+required>
+
+<option value="Paper 1"
+{% if paper.paper == "Paper 1" %}selected{% endif %}>
+Paper 1
+</option>
+
+<option value="Paper 2"
+{% if paper.paper == "Paper 2" %}selected{% endif %}>
+Paper 2
+</option>
+
+<option value="Paper 3"
+{% if paper.paper == "Paper 3" %}selected{% endif %}>
+Paper 3
+</option>
+
+<option value="Practical"
+{% if paper.paper == "Practical" %}selected{% endif %}>
+Practical
+</option>
+
+</select>
+
+</div>
+
+<!-- Replace PDF -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+
+Replace PDF (Optional)
+
+</label>
+
+<input
+type="file"
+name="pdf"
+class="form-control"
+accept=".pdf">
+
+<small class="text-muted">
+
+Leave empty to keep the current PDF file.
+
+</small>
+
+</div>
+
+<!-- Description -->
+
+<div class="col-12 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-card-text text-primary"></i>
+
+Description
+
+</label>
+
+<textarea
+name="description"
+rows="5"
+class="form-control">{{ paper.description }}</textarea>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-end gap-3">
+
+<a href="{% url 'paper_list' %}"
+class="btn btn-outline-secondary">
+
+<i class="bi bi-x-circle"></i>
+
+Cancel
+
+</a>
+
+<button
+type="submit"
+class="btn btn-success">
+
+<i class="bi bi-check-circle-fill"></i>
+
+Save Changes
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+CURRENT PAPER INFORMATION
+========================================== -->
+
+<div class="card shadow border-0 mt-5">
+
+<div class="card-header bg-primary text-white">
+
+<h5 class="mb-0">
+
+<i class="bi bi-info-circle-fill"></i>
+
+Current Paper Information
+
+</h5>
+
+</div>
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-3">
+
+<strong>Subject</strong>
+
+<p>{{ paper.subject.name }}</p>
+
+</div>
+
+<div class="col-md-3">
+
+<strong>Level</strong>
+
+<p>
+
+<span class="badge bg-success">
+
+{{ paper.subject.level }}
+
+</span>
+
+</p>
+
+</div>
+
+<div class="col-md-3">
+
+<strong>Year</strong>
+
+<p>{{ paper.year }}</p>
+
+</div>
+
+<div class="col-md-3">
+
+<strong>Current PDF</strong>
+
+<p>
+
+<a href="{{ paper.pdf.url }}"
+target="_blank"
+class="btn btn-outline-primary btn-sm">
+
+<i class="bi bi-eye-fill"></i>
+
+View PDF
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+```

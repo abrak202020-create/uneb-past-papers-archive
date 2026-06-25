@@ -1,0 +1,584 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+UNEB Past Papers Archive
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+
+<!-- ===========================
+HERO SECTION
+=========================== -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <img src="{% static 'images/uneb-logo.png' %}"
+             alt="UNEB Logo"
+             class="hero-logo">
+
+        <h1>
+
+            UNEB Past Papers Archive
+
+        </h1>
+
+        <div class="text-center">
+
+           <p class="hero-text">
+              Welcome to the official repository for UNEB Past Examination Papers.
+              Search, preview and download verified PLE, UCE and UACE past papers anytime, anywhere.
+            </p>
+
+        </div>
+
+        <div class="hero-buttons">
+
+            <a href="/papers/"
+               class="btn btn-light btn-lg">
+
+                <i class="bi bi-search"></i>
+
+                Browse Papers
+
+            </a>
+
+            <a href="/login/"
+               class="btn admin-btn btn-lg ms-2"
+
+                <i class="bi bi-box-arrow-in-right"></i>
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+SEARCH
+=========================== -->
+
+<div class="search-card">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-4">
+
+            <h2>
+
+                <i class="bi bi-search-heart-fill"></i>
+
+                Search Past Papers
+
+            </h2>
+
+            <p class="text-muted mb-0">
+
+                Find examination papers by subject, year or paper type.
+
+            </p>
+
+        </div>
+
+        <div class="col-lg-8">
+
+            <form method="GET"
+                  action="{% url 'public_search' %}">
+
+                <div class="row g-3">
+
+                    <div class="col-md-9">
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="search"
+                            placeholder="Search Mathematics, English, Biology, 2024...">
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <button class="btn btn-success w-100">
+
+                            <i class="bi bi-search"></i>
+
+                            Search
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+EXAMINATION LEVELS
+=========================== -->
+
+<div class="section-title">
+
+    <h2>
+
+        Browse Examination Levels
+
+    </h2>
+
+    <p>
+
+        Select an examination level to view available past papers.
+
+    </p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<a href="{% url 'public_search' %}?level=PLE"
+class="text-decoration-none">
+
+<div class="level-card ple">
+
+<i class="bi bi-mortarboard-fill text-primary"></i>
+
+<h2>
+
+PLE
+
+</h2>
+
+<p>
+
+Primary Leaving Examination
+
+</p>
+
+<div class="mt-4">
+
+<span class="btn btn-outline-primary">
+
+View Papers
+
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+<div class="col-lg-4">
+
+<a href="{% url 'public_search' %}?level=UCE"
+class="text-decoration-none">
+
+<div class="level-card uce">
+
+<i class="bi bi-book-half text-success"></i>
+
+<h2>
+
+UCE
+
+</h2>
+
+<p>
+
+Uganda Certificate of Education
+
+</p>
+
+<div class="mt-4">
+
+<span class="btn btn-outline-success">
+
+View Papers
+
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+<div class="col-lg-4">
+
+<a href="{% url 'public_search' %}?level=UACE"
+class="text-decoration-none">
+
+<div class="level-card uace">
+
+<i class="bi bi-award-fill text-danger"></i>
+
+<h2>
+
+UACE
+
+</h2>
+
+<p>
+
+Uganda Advanced Certificate of Education
+
+</p>
+
+<div class="mt-4">
+
+<span class="btn btn-outline-danger">
+
+View Papers
+
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- ===========================
+STATISTICS
+=========================== -->
+
+<!-- ===========================
+STATISTICS
+=========================== -->
+
+<div class="section-title">
+
+    <h2>
+
+        Archive Statistics
+
+    </h2>
+
+    <p>
+
+        Current records available in the UNEB Past Papers Archive.
+
+    </p>
+
+</div>
+
+<div class="row g-4 mb-5">
+
+    <div class="col-lg-4">
+
+        <div class="stat-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-book text-primary"></i>
+
+                <h1>
+
+                    {{ subjects }}
+
+                </h1>
+
+                <h5>
+
+                    Subjects Available
+
+                </h5>
+
+                <p class="text-muted">
+
+                    UNEB examinable subjects.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+        <div class="stat-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+
+                <h1>
+
+                    {{ papers }}
+
+                </h1>
+
+                <h5>
+
+                    Past Papers
+
+                </h5>
+
+                <p class="text-muted">
+
+                    Examination papers ready for download.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+        <div class="stat-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-download text-success"></i>
+
+                <h1>
+
+                    {{ downloads }}
+
+                </h1>
+
+                <h5>
+
+                    Downloads
+
+                </h5>
+
+                <p class="text-muted">
+
+                    Total paper downloads.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+LATEST PAPERS
+=========================== -->
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2 class="mb-1">
+
+            <i class="bi bi-file-earmark-richtext-fill text-danger"></i>
+
+            Latest Past Papers
+
+        </h2>
+
+        <p class="text-muted mb-0">
+
+            Recently uploaded examination papers.
+
+        </p>
+
+    </div>
+
+    <a href="/papers/" class="btn btn-success">
+
+        <i class="bi bi-grid"></i>
+
+        View All Papers
+
+    </a>
+
+</div>
+
+<div class="row g-4">
+
+{% for paper in latest_papers %}
+
+<div class="col-lg-4">
+
+<div class="paper-card h-100">
+
+<div class="card-header bg-white border-0 pt-4 text-center">
+
+<i class="bi bi-file-earmark-pdf-fill text-danger display-3"></i>
+
+</div>
+
+<div class="card-body">
+
+<h4 class="mb-3">
+
+{{ paper.subject.name }}
+
+</h4>
+
+<div class="mb-3">
+
+<span class="badge bg-primary">
+
+{{ paper.subject.level }}
+
+</span>
+
+<span class="badge bg-success">
+
+{{ paper.year }}
+
+</span>
+
+<span class="badge bg-warning text-dark">
+
+{{ paper.paper }}
+
+</span>
+
+</div>
+
+<p class="text-muted">
+
+{{ paper.description|default:"Official UNEB examination paper available for download."|truncatewords:18 }}
+
+</p>
+
+<hr>
+
+<div class="row text-center">
+
+<div class="col-6">
+
+<small class="text-muted">
+
+Uploaded
+
+</small>
+
+<br>
+
+<strong>
+
+{{ paper.uploaded_at|date:"M d, Y" }}
+
+</strong>
+
+</div>
+
+<div class="col-6">
+
+<small class="text-muted">
+
+Format
+
+</small>
+
+<br>
+
+<strong>
+
+PDF
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card-footer bg-white border-0 pb-4">
+
+<div class="d-grid gap-2">
+
+<a href="{{ paper.pdf.url }}"
+target="_blank"
+class="btn btn-outline-primary">
+
+<i class="bi bi-eye-fill"></i>
+
+Preview Paper
+
+</a>
+
+<a href="{% url 'download_paper' paper.id %}"
+class="btn btn-success">
+
+<i class="bi bi-download"></i>
+
+Download PDF
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="col-12">
+
+<div class="alert alert-warning shadow-sm">
+
+<h4>
+
+<i class="bi bi-exclamation-circle-fill"></i>
+
+No Past Papers Found
+
+</h4>
+
+<p class="mb-0">
+
+No examination papers have been uploaded yet.
+
+</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+

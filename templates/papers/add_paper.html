@@ -1,0 +1,282 @@
+```html
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+<!-- ==========================================
+PAGE HEADER
+========================================== -->
+
+<div class="d-flex justify-content-between align-items-center mb-5">
+
+    <div>
+
+        <h2 class="fw-bold text-danger">
+
+            <i class="bi bi-cloud-upload-fill"></i>
+
+            Upload Past Paper
+
+        </h2>
+
+        <p class="text-muted">
+
+            Upload a new UNEB examination paper to the archive.
+
+        </p>
+
+    </div>
+
+    <a href="{% url 'paper_list' %}"
+       class="btn btn-outline-secondary">
+
+        <i class="bi bi-arrow-left"></i>
+
+        Back to Papers
+
+    </a>
+
+</div>
+
+<!-- ==========================================
+UPLOAD FORM
+========================================== -->
+
+<div class="card shadow border-0">
+
+<div class="card-body p-5">
+
+<form method="POST"
+      enctype="multipart/form-data">
+
+{% csrf_token %}
+
+<div class="row">
+
+<!-- Subject -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-book-fill text-primary"></i>
+
+Subject
+
+</label>
+
+<select
+name="subject"
+class="form-select"
+required>
+
+<option value="">
+
+Select Subject
+
+</option>
+
+{% for subject in subjects %}
+
+<option value="{{ subject.id }}">
+
+{{ subject.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<!-- Year -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-calendar-event-fill text-success"></i>
+
+Year
+
+</label>
+
+<input
+type="number"
+name="year"
+class="form-control"
+placeholder="Example: 2025"
+required>
+
+</div>
+
+<!-- Paper -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-file-earmark-text-fill text-danger"></i>
+
+Paper
+
+</label>
+
+<select
+name="paper"
+class="form-select"
+required>
+
+<option>
+
+Paper 1
+
+</option>
+
+<option>
+
+Paper 2
+
+</option>
+
+<option>
+
+Paper 3
+
+</option>
+
+<option>
+
+Practical
+
+</option>
+
+</select>
+
+</div>
+
+<!-- PDF -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+
+PDF File
+
+</label>
+
+<input
+type="file"
+name="pdf"
+class="form-control"
+accept=".pdf"
+required>
+
+<small class="text-muted">
+
+Upload PDF documents only.
+
+</small>
+
+</div>
+
+<!-- Description -->
+
+<div class="col-12 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-card-text text-primary"></i>
+
+Description
+
+</label>
+
+<textarea
+name="description"
+rows="5"
+class="form-control"
+placeholder="Brief description of the examination paper..."></textarea>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-end gap-3">
+
+<a href="{% url 'paper_list' %}"
+class="btn btn-outline-secondary">
+
+<i class="bi bi-x-circle"></i>
+
+Cancel
+
+</a>
+
+<button
+type="submit"
+class="btn btn-success">
+
+<i class="bi bi-cloud-upload-fill"></i>
+
+Upload Paper
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+UPLOAD TIPS
+========================================== -->
+
+<div class="card shadow border-0 mt-5">
+
+<div class="card-header bg-primary text-white">
+
+<h5 class="mb-0">
+
+<i class="bi bi-lightbulb-fill"></i>
+
+Upload Guidelines
+
+</h5>
+
+</div>
+
+<div class="card-body">
+
+<ul class="mb-0">
+
+<li>Upload only official UNEB examination papers.</li>
+
+<li>Ensure the selected subject and year are correct.</li>
+
+<li>Use PDF format only.</li>
+
+<li>Add a clear description where necessary.</li>
+
+<li>Review all information before uploading.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+```

@@ -1,0 +1,417 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Create Account
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+<div class="container py-5">
+
+    <!-- ===================================== -->
+    <!-- HERO -->
+    <!-- ===================================== -->
+
+    <div class="row justify-content-center mb-5">
+
+        <div class="col-lg-10 text-center">
+
+            <img src="{% static 'images/uneb-logo.png' %}"
+                 class="hero-logo mb-3"
+                 alt="UNEB Logo">
+
+            <h1 class="hero-title">
+
+                <span class="text-danger">
+
+                    UNEB
+
+                </span>
+
+                Past Papers Archive
+
+            </h1>
+
+            <span class="hero-badge">
+
+                Uganda National Examinations Board
+
+            </span>
+
+            <h3 class="mt-4 fw-bold">
+
+                Create Your Free Account
+
+            </h3>
+
+            <p class="hero-text">
+
+                Choose how you would like to register for the
+                UNEB Past Papers Archive.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- ACCOUNT CARDS -->
+    <!-- ===================================== -->
+
+    <div class="row justify-content-center gx-5 gy-4">
+
+        <!-- ===================================== -->
+        <!-- STUDENT -->
+        <!-- ===================================== -->
+
+        <div class="col-lg-5">
+
+            <div class="account-card">
+
+                <!-- HEADER -->
+
+                <div class="student-header">
+
+                    <div class="text-center">
+
+                        <i class="bi bi-mortarboard-fill account-icon"></i>
+
+                        <h2 class="mt-4 text-white fw-bold">
+
+                            Student
+
+                        </h2>
+
+                        <p class="text-white-50 mb-0">
+
+                            Perfect for learners
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- BODY -->
+
+                <div class="card-body">
+
+                    <div class="feature">
+
+                        <i class="bi bi-check-circle-fill text-success"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Unlimited Downloads
+
+                            </strong>
+
+                            <small>
+
+                                Download past papers anytime.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-search text-primary"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Smart Search
+
+                            </strong>
+
+                            <small>
+
+                                Find papers instantly.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-clock-history text-danger"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Download History
+
+                            </strong>
+
+                            <small>
+
+                                View previous downloads.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-phone text-success"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Learn Anywhere
+
+                            </strong>
+
+                            <small>
+
+                                Desktop, tablet and mobile.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+
+                        <a href="{% url 'student_signup' %}"
+
+                           class="btn btn-primary btn-lg rounded-pill">
+
+                            <i class="bi bi-person-plus-fill me-2"></i>
+
+                            Create Student Account
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+                <!-- ===================================== -->
+        <!-- TEACHER -->
+        <!-- ===================================== -->
+
+        <div class="col-lg-5">
+
+            <div class="account-card">
+
+                <!-- HEADER -->
+
+                <div class="teacher-header">
+
+                    <div class="text-center">
+
+                        <i class="bi bi-person-workspace account-icon"></i>
+
+                        <h2 class="mt-4 text-white fw-bold">
+
+                            Teacher
+
+                        </h2>
+
+                        <p class="text-white-50 mb-0">
+
+                            Perfect for educators
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- BODY -->
+
+                <div class="card-body">
+
+                    <div class="feature">
+
+                        <i class="bi bi-cloud-upload-fill text-success"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Upload Past Papers
+
+                            </strong>
+
+                            <small>
+
+                                Upload examination papers in PDF.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-pencil-square text-warning"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Edit Uploaded Papers
+
+                            </strong>
+
+                            <small>
+
+                                Keep uploaded papers updated.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-folder-check text-primary"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Manage Resources
+
+                            </strong>
+
+                            <small>
+
+                                Organize educational materials.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="bi bi-people-fill text-danger"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Support Students
+
+                            </strong>
+
+                            <small>
+
+                                Help learners succeed academically.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+
+                        <a href="{% url 'teacher_signup' %}"
+
+                           class="btn btn-success btn-lg rounded-pill">
+
+                            <i class="bi bi-person-plus-fill me-2"></i>
+
+                            Create Teacher Account
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- LOGIN SECTION -->
+    <!-- ===================================== -->
+
+    <div class="row justify-content-center mt-5">
+
+        <div class="col-lg-8">
+
+            <div class="login-card">
+
+                <h3 class="fw-bold text-center">
+
+                    Already Registered?
+
+                </h3>
+
+                <p class="text-muted text-center mb-4">
+
+                    Sign in to continue accessing the UNEB Past Papers Archive.
+
+                </p>
+
+                <div class="text-center">
+
+                    <a href="{% url 'login' %}"
+
+                       class="btn btn-outline-dark btn-lg rounded-pill px-5">
+
+                        <i class="bi bi-box-arrow-in-right me-2"></i>
+
+                        Login to Your Account
+
+                    </a>
+
+                </div>
+
+                <hr class="my-4">
+
+                <div class="text-center admin-note">
+
+                    <i class="bi bi-shield-lock-fill text-success me-2"></i>
+
+                    Administrator accounts are created and managed securely
+                    by the UNEB Archive System Administrator.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}

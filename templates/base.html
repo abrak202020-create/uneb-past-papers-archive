@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}UNEB Past Papers Archive{% endblock %}</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %} {% endblock %}
+</head>
+
+<body>
+
+<!-- ===========================================
+TOP INFORMATION BAR
+=========================================== -->
+
+<div class="top-bar">
+
+    <div class="container-fluid px-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span>
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    info@unebarchive.com
+
+                </span>
+
+                <span class="ms-4">
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    +256 700 000000
+
+                </span>
+
+            </div>
+
+            <div class="col-lg-6 text-end">
+
+                <span>
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    Kampala, Uganda
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================================
+NAVIGATION
+=========================================== -->
+
+<nav class="navbar navbar-expand-lg uneb-navbar sticky-top">
+
+<div class="container-fluid px-5">
+
+<a class="navbar-brand d-flex align-items-center" href="/">
+
+<img src="{% static 'images/uneb-logo.png' %}"
+     alt="UNEB Logo">
+
+<div class="ms-3">
+
+<div class="brand-title">
+
+UNEB Archive
+
+</div>
+
+<div class="brand-subtitle">
+
+Past Papers Repository
+
+</div>
+
+</div>
+
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+     id="navbarNav">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+
+<a class="nav-link" href="/">
+
+<i class="bi bi-house-door"></i>
+
+Home
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+href="/papers/">
+
+<i class="bi bi-file-earmark-pdf"></i>
+
+Past Papers
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+href="/downloads/">
+
+<i class="bi bi-download"></i>
+
+Downloads
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+href="/subjects/">
+
+<i class="bi bi-book"></i>
+
+Subjects
+
+</a>
+
+</li>
+
+<li class="nav-item ms-lg-4">
+
+<a href="/login/"
+class="btn login-btn">
+
+<i class="bi bi-box-arrow-in-right"></i>
+
+Login
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ===========================================
+MAIN CONTENT
+=========================================== -->
+
+<div class="page-container">
+
+<div class="home-wrapper">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</div>
+
+<!-- ===========================================
+FOOTER
+=========================================== -->
+
+<!-- ===========================================
+FOOTER
+=========================================== -->
+
+<footer class="footer">
+
+    <div class="container-fluid px-5">
+
+        <div class="row align-items-start gy-4">
+
+            <!-- Logo -->
+
+            <div class="col-lg-5">
+
+                <div class="d-flex align-items-center mb-3">
+
+                    <img src="{% static 'images/uneb-logo.png' %}"
+                         width="55"
+                         class="me-3">
+
+                    <div>
+
+                        <h3 class="mb-0 text-warning fw-bold">
+
+                            UNEB Archive
+
+                        </h3>
+
+                        <small class="text-light">
+
+                            Past Papers Repository
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <p class="footer-text">
+
+                    Access verified UNEB Past Examination Papers
+                    for PLE, UCE and UACE. Search, preview and
+                    download papers anytime.
+
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-3">
+
+                <h5 class="footer-title">
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="footer-links">
+
+                    <li><a href="/">Home</a></li>
+
+                    <li><a href="/papers/">Past Papers</a></li>
+
+                    <li><a href="/subjects/">Subjects</a></li>
+
+                    <li><a href="/downloads/">Downloads</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-4">
+
+                <h5 class="footer-title">
+
+                    Contact Information
+
+                </h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill me-2"></i>
+
+                    info@unebarchive.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+
+                    +256 700 000000
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+
+                    Kampala, Uganda
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="text-center footer-bottom">
+
+            © 2026 UNEB Past Papers Archive |
+            Developed using
+            <strong>Django</strong>,
+            <strong>PostgreSQL</strong> &
+            <strong>Bootstrap 5</strong>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

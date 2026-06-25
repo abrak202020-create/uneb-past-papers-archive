@@ -1,0 +1,9 @@
+{% extends "admin/base_site.html" %}
+
+{% block userlinks %}
+    <a href="{% url 'dashboard' %}" style="margin-right:15px;">
+        ⬅ Dashboard
+    </a>
+
+    {{ block.super }}
+{% endblock %}

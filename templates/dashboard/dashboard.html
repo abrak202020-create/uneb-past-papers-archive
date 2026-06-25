@@ -1,0 +1,857 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}
+
+{% if request.user.userprofile.role == "ADMIN" %}
+
+Administrator Dashboard
+
+{% elif request.user.userprofile.role == "TEACHER" %}
+
+Teacher Dashboard
+
+{% else %}
+
+Student Portal
+
+{% endif %}
+
+{% endblock %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<!-- ==========================================
+PAGE HEADER
+========================================== -->
+
+<div class="page-header mb-5">
+
+    <div>
+
+        <h1 class="page-title">
+
+            <i class="bi bi-speedometer2 text-danger"></i>
+
+            {% if request.user.userprofile.role == "ADMIN" %}
+
+                Administrator Dashboard
+
+            {% elif request.user.userprofile.role == "TEACHER" %}
+
+                Teacher Dashboard
+
+            {% else %}
+
+                Student Portal
+
+            {% endif %}
+
+        </h1>
+
+        <p class="text-muted">
+
+            Welcome back,
+
+            <strong>{{ request.user.username }}</strong>.
+
+            {% if request.user.userprofile.role == "ADMIN" %}
+
+                Manage the UNEB Past Papers Archive from one place.
+
+            {% elif request.user.userprofile.role == "TEACHER" %}
+
+                Upload and manage examination papers assigned to you.
+
+            {% else %}
+
+                Browse and download UNEB past papers.
+
+            {% endif %}
+
+        </p>
+
+    </div>
+
+    <div>
+
+        {% if request.user.userprofile.role != "STUDENT" %}
+
+        <a href="{% url 'add_paper' %}"
+           class="btn btn-success">
+
+            <i class="bi bi-cloud-upload-fill"></i>
+
+            Upload Paper
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+STATISTICS
+========================================== -->
+
+<div class="row g-4 mb-5">
+
+    <div class="col-xl-3 col-md-6">
+
+        <div class="dashboard-card bg-primary fade-up">
+
+            <div>
+
+                <h5>Total Subjects</h5>
+
+                <h1 class="counter">
+
+                    {{ subjects }}
+
+                </h1>
+
+                <small>
+
+                    Registered Subjects
+
+                </small>
+
+            </div>
+
+            <i class="bi bi-book-half"></i>
+
+        </div>
+
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+
+        <div class="dashboard-card bg-success fade-up">
+
+            <div>
+
+                <h5>Past Papers</h5>
+
+                <h1 class="counter">
+
+                    {{ papers }}
+
+                </h1>
+
+                <small>
+
+                    Available PDFs
+
+                </small>
+
+            </div>
+
+            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+        </div>
+
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+
+        <div class="dashboard-card bg-warning fade-up">
+
+            <div>
+
+                <h5>Downloads</h5>
+
+                <h1 class="counter">
+
+                    {{ downloads }}
+
+                </h1>
+
+                <small>
+
+                    Total Downloads
+
+                </small>
+
+            </div>
+
+            <i class="bi bi-download"></i>
+
+        </div>
+
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+
+        <div class="dashboard-card bg-danger fade-up">
+
+            <div>
+
+                <h5>Users</h5>
+
+                <h1 class="counter">
+
+                    {{ users }}
+
+                </h1>
+
+                <small>
+
+                    Registered Users
+
+                </small>
+
+            </div>
+
+            <i class="bi bi-people-fill"></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+SECOND ROW
+========================================== -->
+
+<div class="row g-4">
+
+<div class="col-lg-8">
+
+<div class="content-card">
+
+<h4>
+
+<i class="bi bi-lightning-charge-fill text-warning"></i>
+
+Quick Actions
+
+</h4>
+
+<hr>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+
+<a href="{% url 'add_paper' %}"
+
+class="btn btn-success w-100 py-3">
+
+<i class="bi bi-upload"></i>
+
+<br>
+
+Upload Paper
+
+</a>
+
+</div>
+
+<div class="col-md-4">
+
+<a href="{% url 'paper_list' %}"
+
+class="btn btn-primary w-100 py-3">
+
+<i class="bi bi-folder2-open"></i>
+
+<br>
+
+Manage Papers
+
+</a>
+
+</div>
+
+<div class="col-md-4">
+
+<a href="{% url 'subject_list' %}"
+
+class="btn btn-warning w-100 py-3">
+
+<i class="bi bi-book-half"></i>
+
+<br>
+
+Manage Subjects
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="content-card">
+
+<h4>
+
+<i class="bi bi-cpu-fill text-success"></i>
+
+System Health
+
+</h4>
+
+<hr>
+
+<div class="health-item">
+
+<span>
+
+Database
+
+</span>
+
+<span class="health-status"></span>
+
+</div>
+
+<div class="health-item">
+
+<span>
+
+Media Storage
+
+</span>
+
+<span class="health-status"></span>
+
+</div>
+
+<div class="health-item">
+
+<span>
+
+Authentication
+
+</span>
+
+<span class="health-status"></span>
+
+</div>
+
+<div class="health-item">
+
+<span>
+
+Django Server
+
+</span>
+
+<span class="health-status"></span>
+
+</div>
+
+<div class="health-item">
+
+<span>
+
+Application Status
+
+</span>
+
+<span class="badge bg-success">
+
+ONLINE
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ==========================================
+THIRD ROW
+========================================== -->
+
+<div class="row g-4 mt-1">
+
+    <!-- Charts -->
+
+    <div class="col-lg-8">
+
+        <div class="content-card chart-card">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <h4>
+
+                    <i class="bi bi-pie-chart-fill text-danger"></i>
+
+                    Papers Distribution by Level
+
+                </h4>
+
+                <span class="badge bg-success">
+
+                    Live Data
+
+                </span>
+
+            </div>
+
+            <canvas id="papersChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- Administrator -->
+
+    <div class="col-lg-4">
+
+        <div class="content-card admin-card">
+
+            <i class="bi bi-person-circle text-danger"
+               style="font-size:90px;"></i>
+
+            <h4 class="mt-3">
+
+                {{ request.user.username }}
+
+            </h4>
+
+            <small>
+
+                System Administrator
+
+            </small>
+
+            <hr>
+
+            <div class="row text-center">
+
+                <div class="col-6">
+
+                    <h5>
+
+                        {{ papers }}
+
+                    </h5>
+
+                    <small>
+
+                        Papers
+
+                    </small>
+
+                </div>
+
+                <div class="col-6">
+
+                    <h5>
+
+                        {{ downloads }}
+
+                    </h5>
+
+                    <small>
+
+                        Downloads
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <span class="badge bg-success pulse">
+
+                ● Online
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+LATEST PAPERS & RECENT DOWNLOADS
+========================================== -->
+
+<div class="row g-4 mt-3">
+
+    <!-- Latest Papers -->
+
+    <div class="col-lg-6">
+
+        <div class="content-card">
+
+            <div class="d-flex justify-content-between">
+
+                <h4>
+
+                    <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+
+                    Latest Uploaded Papers
+
+                </h4>
+
+                <a href="{% url 'paper_list' %}">
+
+                    View All
+
+                </a>
+
+            </div>
+
+            <hr>
+
+            {% for paper in recent_papers %}
+
+            <div class="paper-item">
+
+                <div>
+
+                    <div class="paper-title">
+
+                        {{ paper.subject.name }}
+
+                    </div>
+
+                    <div class="paper-year">
+
+                        {{ paper.subject.level }}
+
+                        •
+
+                        {{ paper.year }}
+
+                        •
+
+                        {{ paper.paper }}
+
+                    </div>
+
+                </div>
+
+                <span class="badge bg-success">
+
+                    PDF
+
+                </span>
+
+            </div>
+
+            {% empty %}
+
+            <div class="alert alert-info">
+
+                No papers uploaded yet.
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!-- Recent Downloads -->
+
+    <div class="col-lg-6">
+
+        <div class="content-card">
+
+            <div class="d-flex justify-content-between">
+
+                <h4>
+
+                    <i class="bi bi-download text-success"></i>
+
+                    Recent Downloads
+
+                </h4>
+
+                <a href="{% url 'download_list' %}">
+
+                    View All
+
+                </a>
+
+            </div>
+
+            <hr>
+
+            {% for item in recent_downloads %}
+
+            <div class="activity">
+
+                <strong>
+
+                    {{ item.paper.subject.name }}
+
+                </strong>
+
+                <br>
+
+                <small class="text-muted">
+
+                    {{ item.downloaded_at }}
+
+                </small>
+
+            </div>
+
+            {% empty %}
+
+            <div class="alert alert-warning">
+
+                No downloads recorded.
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+FOURTH ROW
+========================================== -->
+
+<div class="row g-4 mt-3">
+
+    <!-- Dashboard Tips -->
+
+    <div class="col-lg-8">
+
+        <div class="content-card">
+
+            <h4>
+
+                <i class="bi bi-megaphone-fill text-warning"></i>
+
+                Administrator Notice
+
+            </h4>
+
+            <hr>
+
+            <div class="activity">
+
+                <strong>
+
+                    Upload Quality PDFs
+
+                </strong>
+
+                <p class="mb-0">
+
+                    Ensure every uploaded examination paper is clear,
+                    complete and verified before publishing.
+
+                </p>
+
+            </div>
+
+            <div class="activity">
+
+                <strong>
+
+                    Manage Subjects
+
+                </strong>
+
+                <p class="mb-0">
+
+                    Keep subject codes and examination levels updated.
+
+                </p>
+
+            </div>
+
+            <div class="activity">
+
+                <strong>
+
+                    Monitor Downloads
+
+                </strong>
+
+                <p class="mb-0">
+
+                    Review download statistics regularly to understand
+                    the most accessed examination papers.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Statistics -->
+
+    <div class="col-lg-4">
+
+        <div class="content-card">
+
+            <h4>
+
+                <i class="bi bi-bar-chart-fill text-primary"></i>
+
+                Quick Summary
+
+            </h4>
+
+            <hr>
+
+            <div class="health-item">
+
+                <span>
+
+                    PLE Papers
+
+                </span>
+
+                <strong>
+
+                    {{ ple }}
+
+                </strong>
+
+            </div>
+
+            <div class="health-item">
+
+                <span>
+
+                    UCE Papers
+
+                </span>
+
+                <strong>
+
+                    {{ uce }}
+
+                </strong>
+
+            </div>
+
+            <div class="health-item">
+
+                <span>
+
+                    UACE Papers
+
+                </span>
+
+                <strong>
+
+                    {{ uace }}
+
+                </strong>
+
+            </div>
+
+            <div class="health-item">
+
+                <span>
+
+                    Total Downloads
+
+                </span>
+
+                <strong>
+
+                    {{ downloads }}
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const paperChart = document.getElementById("papersChart");
+
+    if (!paperChart) {
+        return;
+    }
+
+    new Chart(paperChart, {
+
+        type: "doughnut",
+
+        data: {
+
+            labels: ["PLE", "UCE", "UACE"],
+
+            datasets: [{
+
+                data: [
+                    Number("{{ ple|default:0 }}"),
+                    Number("{{ uce|default:0 }}"),
+                    Number("{{ uace|default:0 }}")
+                ],
+
+                backgroundColor: [
+                    "#198754",
+                    "#0d6efd",
+                    "#dc3545"
+                ],
+
+                borderWidth: 0
+
+            }]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    position: "bottom"
+
+                }
+
+            }
+
+        }
+
+    });
+
+});
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Student Registration
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+<div class="container py-5">
+
+<div class="row justify-content-center">
+
+    <!-- LEFT SIDE -->
+
+    <div class="col-lg-5 register-left">
+
+        <div class="text-center">
+
+            <img src="{% static 'images/uneb-logo.png' %}"
+                 class="hero-logo mb-4"
+                 alt="UNEB Logo">
+
+            <h1 class="display-4 fw-bold text-white">
+
+                Student Registration
+
+            </h1>
+
+            <p class="lead text-white mt-4">
+
+                Create your student account to access
+                thousands of UNEB past papers anytime,
+                anywhere.
+
+            </p>
+
+            <hr class="border-light my-4">
+
+            <div class="row text-white">
+
+                <div class="col-4 text-center">
+
+                    <i class="bi bi-file-earmark-pdf display-5"></i>
+
+                    <h3 class="mt-2">1000+</h3>
+
+                    <small>Past Papers</small>
+
+                </div>
+
+                <div class="col-4 text-center">
+
+                    <i class="bi bi-journal-bookmark display-5"></i>
+
+                    <h3 class="mt-2">100+</h3>
+
+                    <small>Subjects</small>
+
+                </div>
+
+                <div class="col-4 text-center">
+
+                    <i class="bi bi-download display-5"></i>
+
+                    <h3 class="mt-2">50K+</h3>
+
+                    <small>Downloads</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="col-lg-6">
+
+        <div class="login-card">
+
+            <div class="text-center mb-4">
+
+                <i class="bi bi-mortarboard-fill text-primary display-3"></i>
+
+                <h2 class="fw-bold mt-3">
+
+                    Create Student Account
+
+                </h2>
+
+                <p class="text-muted">
+
+                    Fill in your details below.
+
+                </p>
+
+            </div>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                {% if form.errors %}
+
+<div class="alert alert-danger">
+
+    <strong>Please correct the following errors:</strong>
+
+    {% for field in form %}
+    {% for error in field.errors %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+               <div class="row">
+
+    <div class="col-md-6 mb-3">
+
+        <label>First Name</label>
+
+        {{ form.first_name }}
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label>Last Name</label>
+
+        {{ form.last_name }}
+
+    </div>
+
+</div>
+                <div class="mb-3">
+
+                    <label>Username</label>
+
+                    {{ form.username }}
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label>Email Address</label>
+
+                    {{ form.email }}
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label>School</label>
+
+                    {{ form.school }}
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label>Password</label>
+
+                    {{ form.password1 }}
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label>Confirm Password</label>
+
+                    {{ form.password2 }}
+
+                </div>
+
+                <button class="btn btn-primary w-100 btn-lg">
+
+                    <i class="bi bi-person-plus-fill me-2"></i>
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <div class="text-center mt-4">
+
+                Already have an account?
+
+                <a href="{% url 'login' %}">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

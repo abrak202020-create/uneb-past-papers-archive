@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Subject
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Add Subject</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label>Subject Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Subject Code</label>
+            <input type="text" name="code" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Level</label>
+
+            <select name="level" class="form-control">
+
+                <option value="PLE">PLE</option>
+                <option value="UCE">UCE</option>
+                <option value="UACE">UACE</option>
+
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label>Description</label>
+
+            <textarea
+                name="description"
+                class="form-control"
+                rows="4"></textarea>
+
+        </div>
+
+        <button class="btn btn-success">
+
+            Save Subject
+
+        </button>
+
+        <a href="{% url 'subject_list' %}" class="btn btn-secondary">
+
+            Cancel
+
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

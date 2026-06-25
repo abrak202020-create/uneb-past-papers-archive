@@ -1,0 +1,273 @@
+```html
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Subject
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+<!-- ==========================================
+PAGE HEADER
+========================================== -->
+
+<div class="d-flex justify-content-between align-items-center mb-5">
+
+    <div>
+
+        <h2 class="fw-bold text-danger">
+
+            <i class="bi bi-pencil-square"></i>
+
+            Edit Subject
+
+        </h2>
+
+        <p class="text-muted">
+
+            Update the details of this UNEB examination subject.
+
+        </p>
+
+    </div>
+
+    <a href="{% url 'subject_list' %}"
+       class="btn btn-outline-secondary">
+
+        <i class="bi bi-arrow-left"></i>
+
+        Back to Subjects
+
+    </a>
+
+</div>
+
+<!-- ==========================================
+EDIT SUBJECT FORM
+========================================== -->
+
+<div class="card shadow border-0">
+
+<div class="card-body p-5">
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="row">
+
+<!-- Subject Name -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-book-fill text-primary"></i>
+
+Subject Name
+
+</label>
+
+<input
+type="text"
+name="name"
+value="{{ subject.name }}"
+class="form-control"
+placeholder="Enter subject name"
+required>
+
+</div>
+
+<!-- Subject Code -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-upc-scan text-success"></i>
+
+Subject Code
+
+</label>
+
+<input
+type="text"
+name="code"
+value="{{ subject.code }}"
+class="form-control"
+placeholder="Example: MAT101"
+required>
+
+</div>
+
+<!-- Level -->
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-mortarboard-fill text-danger"></i>
+
+Education Level
+
+</label>
+
+<select
+name="level"
+class="form-select"
+required>
+
+<option value="PLE"
+{% if subject.level == "PLE" %}selected{% endif %}>
+
+PLE
+
+</option>
+
+<option value="UCE"
+{% if subject.level == "UCE" %}selected{% endif %}>
+
+UCE
+
+</option>
+
+<option value="UACE"
+{% if subject.level == "UACE" %}selected{% endif %}>
+
+UACE
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Description -->
+
+<div class="col-12 mb-4">
+
+<label class="form-label fw-bold">
+
+<i class="bi bi-card-text text-primary"></i>
+
+Description
+
+</label>
+
+<textarea
+name="description"
+rows="5"
+class="form-control"
+placeholder="Provide a brief description of the subject...">{{ subject.description }}</textarea>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-end gap-3">
+
+<a href="{% url 'subject_list' %}"
+class="btn btn-outline-secondary">
+
+<i class="bi bi-x-circle"></i>
+
+Cancel
+
+</a>
+
+<button
+type="submit"
+class="btn btn-success">
+
+<i class="bi bi-check-circle-fill"></i>
+
+Update Subject
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+CURRENT SUBJECT INFORMATION
+========================================== -->
+
+<div class="card shadow border-0 mt-5">
+
+<div class="card-header bg-primary text-white">
+
+<h5 class="mb-0">
+
+<i class="bi bi-info-circle-fill"></i>
+
+Current Subject Information
+
+</h5>
+
+</div>
+
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<strong>Subject</strong>
+
+<p>{{ subject.name }}</p>
+
+</div>
+
+<div class="col-md-4">
+
+<strong>Code</strong>
+
+<p>
+
+<span class="badge bg-secondary">
+
+{{ subject.code }}
+
+</span>
+
+</p>
+
+</div>
+
+<div class="col-md-4">
+
+<strong>Level</strong>
+
+<p>
+
+{% if subject.level == "PLE" %}
+<span class="badge bg-primary">PLE</span>
+{% elif subject.level == "UCE" %}
+<span class="badge bg-success">UCE</span>
+{% else %}
+<span class="badge bg-danger">UACE</span>
+{% endif %}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+```
