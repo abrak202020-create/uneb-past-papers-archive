@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'uneb_archive.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgresql://postgres:BEO2026@localhost:5432/uneb_archive_db",
+        default="postgresql://uneb_archive_db_user:trYuU5Orh8zcO4N87Sj4yK7iEY49rzjL@dpg-d8upgg80697c73er4hh0-a.oregon-postgres.render.com/uneb_archive_db",
         conn_max_age=600,
     )
 }

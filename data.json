@@ -1,0 +1,2705 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-06-23T15:11:38.046Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "teacher1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-06-23T17:16:54.147Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "teacher1 - TEACHER",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-06-23T17:17:35.841Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "student1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 3,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 2,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 2,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 2,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 2,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 7,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 7,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 7,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 7,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add subject",
+        "content_type": 8,
+        "codename": "add_subject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change subject",
+        "content_type": 8,
+        "codename": "change_subject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete subject",
+        "content_type": 8,
+        "codename": "delete_subject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view subject",
+        "content_type": 8,
+        "codename": "view_subject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add past paper",
+        "content_type": 9,
+        "codename": "add_pastpaper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change past paper",
+        "content_type": 9,
+        "codename": "change_pastpaper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete past paper",
+        "content_type": 9,
+        "codename": "delete_pastpaper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view past paper",
+        "content_type": 9,
+        "codename": "view_pastpaper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add download",
+        "content_type": 10,
+        "codename": "add_download"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change download",
+        "content_type": 10,
+        "codename": "change_download"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete download",
+        "content_type": 10,
+        "codename": "delete_download"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view download",
+        "content_type": 10,
+        "codename": "view_download"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": 11,
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": 11,
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": 11,
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view user profile",
+        "content_type": 11,
+        "codename": "view_userprofile"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$EAtOfEIo7jjvRSUn4AUfq2$heQOzXG5nvOgI7gzZTONGI0z+GHd8VxfEom605eC62E=",
+        "last_login": "2026-06-26T21:48:58.711Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@uneb.ac.ug",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-19T21:25:30.441Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$bWwm0boQSAF6BVH7VBfKbm$L8lW3FwYHXR/RVN8GANiJW1O4BXwAXLDhG4ZnELfSV8=",
+        "last_login": "2026-06-21T07:58:01.804Z",
+        "is_superuser": true,
+        "username": "UNEB",
+        "first_name": "",
+        "last_name": "",
+        "email": "info@unebarchive.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-21T07:56:41.675Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$xMY3HGFtpHnXI9ZQd8Gidb$wSH/d0VtvFAbrr9pCut03+jcFS3u6DsYYgBABj8lWk0=",
+        "last_login": "2026-06-23T18:48:52.513Z",
+        "is_superuser": false,
+        "username": "teacher1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-23T15:11:37.273Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$bjS6fmyxEwOXVGOs3ikQni$ebOMrcqytly5uw/84WMnahm93iSKlNHHFCnF7xiutCg=",
+        "last_login": "2026-06-25T12:44:31.715Z",
+        "is_superuser": false,
+        "username": "student1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-23T17:17:35.189Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$aOFGK8ETa0dvYXbMxXL3qy$zdrVLVtoRJy2wQ85GKHZh+L5DHmXnFz0yAHK8UyKd64=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Abrak",
+        "first_name": "Abra",
+        "last_name": "kiz",
+        "email": "abrak2020@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-24T22:37:46.947Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$PcKUv1nRbixqwRRLyuHmQq$yvJ2d/rAyNPQzjhnx9msy/g4WkpnBb8S8MVVPQ9+ajQ=",
+        "last_login": "2026-06-25T04:25:34.198Z",
+        "is_superuser": false,
+        "username": "Kiz",
+        "first_name": "Abrak",
+        "last_name": "kizito",
+        "email": "abrak20@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-24T22:48:36.113Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$1XNOb8yug6W6PbhDnTYLBG$Wq3SCoBYDDpA6o7/+qVDozMm/Dp0nyvRqQTXSUcDBPM=",
+        "last_login": "2026-06-25T12:30:26.489Z",
+        "is_superuser": false,
+        "username": "Tom",
+        "first_name": "Tom",
+        "last_name": "Okelo",
+        "email": "tokelo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-24T23:12:14.353Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$TGmqNr6FAH0Edhh64ImWd6$b5QAK+9Bmkq/zNALArtsxD8n0duOqIM3sfGpjy3gHsA=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin1",
+        "first_name": "",
+        "last_name": "",
+        "email": "info@unebarchive.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-26T20:43:02.228Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "users",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "subjects",
+        "model": "subject"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "papers",
+        "model": "pastpaper"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "downloads",
+        "model": "download"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "users",
+        "model": "userprofile"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6gakck3q12u76yg0qx9ho8xouzy5u0k8",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgCwI9eu8byC4stmrapLQn499Nkx70OjOZNyTatzHtTdY0FejBwOWXMeWnzIcoD5rvi8rLvK0TqyNRp21qWIq8bmf7NxipjdBDLNdSrQ6EXClki95rYkQWQqO7TnKwJByct0gu6BKM52hi56LLYip8vu2MN84:1wcbh5:bEQycxCb3-SawzbPM3o2ty82gvdtnlN1Vld6ctAd49U",
+        "expire_date": "2026-07-09T04:28:03.740Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "czd1b6nfop0kcy4p4q0qymzljx8t5qc7",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgCwI9eu8byC4stmrapLQn499Nkx70OjOZNyTatzHtTdY0FejBwOWXMeWnzIcoD5rvi8rLvK0TqyNRp21qWIq8bmf7NxipjdBDLNdSrQ6EXClki95rYkQWQqO7TnKwJByct0gu6BKM52hi56LLYip8vu2MN84:1wdEPy:aIXHFMhIRflCPy6cDNSs4eI5iMAWk1gDLfFkth2Kna0",
+        "expire_date": "2026-07-10T21:48:58.722Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "u830oh05dh635awzuf7htpabjsqny3bg",
+    "fields": {
+        "session_data": ".eJxVjDEKwzAMAP-iuZjIyLWVsXvfEGTZ1GmLDXEyhf69BDK0691xO0yyrWXael6mOcEIDi6_LIq-cj1Eekp9NKOtrssczZGY03Zzbym_b2f7NyjSC4zAFFxSVrQo7KK9qrqE7GUgP1iWxJ5JbUCfVZmiVcuOVFECIToPny_PdTce:1wcjRX:uoCs2EbbTbLkFh_echMtMOYySqK982yaGnuryqwY7S4",
+        "expire_date": "2026-07-09T12:44:31.733Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xv6rl5abvs4l3lcsbatnx1nlpbd4ujza",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgCwI9eu8byC4stmrapLQn499Nkx70OjOZNyTatzHtTdY0FejBwOWXMeWnzIcoD5rvi8rLvK0TqyNRp21qWIq8bmf7NxipjdBDLNdSrQ6EXClki95rYkQWQqO7TnKwJByct0gu6BKM52hi56LLYip8vu2MN84:1wah3A:m-I7BicPPKh69XDjfabEuKS_3h9231ySAY-UqSbtFkU",
+        "expire_date": "2026-07-03T21:46:56.292Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 1,
+    "fields": {
+        "user": 4,
+        "role": "TEACHER",
+        "school": "",
+        "teaching_subject": "",
+        "created_at": "2026-06-24T22:46:03.905Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "role": "ADMIN",
+        "school": "",
+        "teaching_subject": "",
+        "created_at": "2026-06-24T22:46:03.905Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 3,
+    "fields": {
+        "user": 5,
+        "role": "STUDENT",
+        "school": "",
+        "teaching_subject": "",
+        "created_at": "2026-06-24T22:46:03.905Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 4,
+    "fields": {
+        "user": 7,
+        "role": "STUDENT",
+        "school": "Kampala Parents H/S",
+        "teaching_subject": "",
+        "created_at": "2026-06-24T22:48:37.054Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 5,
+    "fields": {
+        "user": 8,
+        "role": "TEACHER",
+        "school": "Wakiso SS",
+        "teaching_subject": "History",
+        "created_at": "2026-06-24T23:12:15.516Z"
+    }
+},
+{
+    "model": "users.userprofile",
+    "pk": 6,
+    "fields": {
+        "user": 9,
+        "role": "ADMIN",
+        "school": "",
+        "teaching_subject": "",
+        "created_at": "2026-06-26T20:43:02.955Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 1,
+    "fields": {
+        "name": "MATHEMATICS",
+        "code": "002",
+        "level": "PLE",
+        "description": "",
+        "created_at": "2026-06-20T06:00:25.447Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 3,
+    "fields": {
+        "name": "SOCIAL STUDIES (SST)",
+        "code": "003",
+        "level": "PLE",
+        "description": "",
+        "created_at": "2026-06-20T06:28:03.981Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 4,
+    "fields": {
+        "name": "INTEGRATED SCIENCE",
+        "code": "004",
+        "level": "PLE",
+        "description": "",
+        "created_at": "2026-06-20T06:28:31.010Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 9,
+    "fields": {
+        "name": "ENGLISH",
+        "code": "001",
+        "level": "PLE",
+        "description": "",
+        "created_at": "2026-06-20T19:51:07.949Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 10,
+    "fields": {
+        "name": "English Language",
+        "code": "112",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:17:50.407Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 12,
+    "fields": {
+        "name": "Geography",
+        "code": "223",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:19:37.748Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 13,
+    "fields": {
+        "name": "Entrepreneurship Education",
+        "code": "227",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:20:13.905Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 14,
+    "fields": {
+        "name": "Christian Religious Education (CRE)",
+        "code": "241",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:20:51.420Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 15,
+    "fields": {
+        "name": "Islamic Religious Education (IRE)",
+        "code": "242",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:21:34.190Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 16,
+    "fields": {
+        "name": "Literature in English",
+        "code": "255",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:22:22.395Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 17,
+    "fields": {
+        "name": "Kiswahili",
+        "code": "260",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:23:13.640Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 18,
+    "fields": {
+        "name": "Art & Design",
+        "code": "612",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:24:36.428Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 19,
+    "fields": {
+        "name": "Nutrition and Food Technology ",
+        "code": "336",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:25:04.679Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 20,
+    "fields": {
+        "name": "ICT / Computer Studies",
+        "code": "349",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:25:27.063Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 21,
+    "fields": {
+        "name": "Mathematics",
+        "code": "456",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:26:12.310Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 22,
+    "fields": {
+        "name": "Agriculture",
+        "code": "457",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:27:12.948Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 23,
+    "fields": {
+        "name": "Biology",
+        "code": "527",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:27:39.064Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 24,
+    "fields": {
+        "name": "Physics",
+        "code": "535",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:28:01.660Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 25,
+    "fields": {
+        "name": "Chemistry",
+        "code": "545",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:28:30.008Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 26,
+    "fields": {
+        "name": "Commerce",
+        "code": "224",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:30:10.409Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 30,
+    "fields": {
+        "name": "French",
+        "code": "265",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:32:04.504Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 31,
+    "fields": {
+        "name": "German",
+        "code": "266",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:32:26.904Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 32,
+    "fields": {
+        "name": "Latin",
+        "code": "267",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:32:47.215Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 33,
+    "fields": {
+        "name": "Arabic",
+        "code": "268",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:33:15.936Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 34,
+    "fields": {
+        "name": "Luganda",
+        "code": "273",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:33:44.146Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 35,
+    "fields": {
+        "name": "Lusoga",
+        "code": "274",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:34:04.183Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 36,
+    "fields": {
+        "name": "Runyankore-Rukiga",
+        "code": "275",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:34:44.280Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 37,
+    "fields": {
+        "name": "Luo (Acholi/Lango)",
+        "code": "276",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:35:12.368Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 38,
+    "fields": {
+        "name": "Ateso",
+        "code": "277",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:35:42.857Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 39,
+    "fields": {
+        "name": "Lugbara",
+        "code": "278",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:36:04.196Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 40,
+    "fields": {
+        "name": "Other approved local languages (where offered)",
+        "code": "279",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:37:09.496Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 42,
+    "fields": {
+        "name": "Music / Performing Arts",
+        "code": "320",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:38:24.126Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 43,
+    "fields": {
+        "name": "Acholi",
+        "code": "305",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:44:04.067Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 44,
+    "fields": {
+        "name": "Lango",
+        "code": "315",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:44:23.092Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 45,
+    "fields": {
+        "name": "Lugbarati",
+        "code": "325",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:44:57.595Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 46,
+    "fields": {
+        "name": "Dhopadhola",
+        "code": "375",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:45:26.193Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 47,
+    "fields": {
+        "name": "Runyoro-Rutooro",
+        "code": "385",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:45:56.910Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 48,
+    "fields": {
+        "name": "Lumasaaba",
+        "code": "395",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:46:19.135Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 49,
+    "fields": {
+        "name": "Chinese",
+        "code": "396",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:46:44.849Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 50,
+    "fields": {
+        "name": "Ugandan Sign Language",
+        "code": "397",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:47:07.809Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 51,
+    "fields": {
+        "name": "Performing Arts",
+        "code": "555",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:50:59.788Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 52,
+    "fields": {
+        "name": "Technology & Design",
+        "code": "736",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T09:51:54.654Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 55,
+    "fields": {
+        "name": "General Paper (GP)",
+        "code": "S101",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T09:58:58.108Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 56,
+    "fields": {
+        "name": "Subsidiary Mathematics",
+        "code": "S475",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:00:17.040Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 57,
+    "fields": {
+        "name": "Subsidiary ICT",
+        "code": "S850",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:01:00.360Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 58,
+    "fields": {
+        "name": "History",
+        "code": "P210",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:01:40.940Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 59,
+    "fields": {
+        "name": "Economics",
+        "code": "P220",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:02:17.539Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 61,
+    "fields": {
+        "name": "History & Political Education",
+        "code": "249",
+        "level": "UCE",
+        "description": "",
+        "created_at": "2026-06-23T10:07:16.148Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 63,
+    "fields": {
+        "name": "Entrepreneurship Education UACE",
+        "code": "P230",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:10:52.371Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 64,
+    "fields": {
+        "name": "Islamic Religious Education (UACE)",
+        "code": "P235",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:11:54.577Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 65,
+    "fields": {
+        "name": "Christian Religious Education (UACE)",
+        "code": "P245",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:12:37.407Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 66,
+    "fields": {
+        "name": "Geography (UACE)",
+        "code": "P250",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:13:12.256Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 67,
+    "fields": {
+        "name": "Literature in English (UACE)",
+        "code": "P310",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:13:38.146Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 68,
+    "fields": {
+        "name": "Kiswahili (UACE)",
+        "code": "P320",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:16:11.080Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 69,
+    "fields": {
+        "name": "French (UACE)",
+        "code": "P330",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:16:39.234Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 70,
+    "fields": {
+        "name": "Luganda (UACE)",
+        "code": "P340",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:17:08.989Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 71,
+    "fields": {
+        "name": "Lusoga (UACE)",
+        "code": "P350",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:22:18.303Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 72,
+    "fields": {
+        "name": "RunyoroûRutooro ",
+        "code": "P360",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:23:07.161Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 73,
+    "fields": {
+        "name": "RunyankoreûRukiga",
+        "code": "P364",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:24:01.539Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 75,
+    "fields": {
+        "name": "Ateso (UACE)",
+        "code": "P370",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:24:45.594Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 76,
+    "fields": {
+        "name": "Lugbarati (UACE)",
+        "code": "P380",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:25:10.128Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 77,
+    "fields": {
+        "name": "Acholi (UACE)",
+        "code": "P390",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:26:13.546Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 78,
+    "fields": {
+        "name": "Mathematics (UACE)",
+        "code": "P425",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:26:46.207Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 79,
+    "fields": {
+        "name": "Physics (UACE)",
+        "code": "P510",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:31:54.368Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 80,
+    "fields": {
+        "name": "Agriculture (UACE)",
+        "code": "P515",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:32:47.390Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 81,
+    "fields": {
+        "name": "Chemistry (UACE)",
+        "code": "P525",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:33:26.150Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 82,
+    "fields": {
+        "name": "Biology (UACE)",
+        "code": "P530",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:34:29.255Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 83,
+    "fields": {
+        "name": "Fine Art (UACE)",
+        "code": "P615",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:35:03.587Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 84,
+    "fields": {
+        "name": "ICT (Principal)",
+        "code": "P840",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T10:35:34.829Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 85,
+    "fields": {
+        "name": "Latin (UACE)",
+        "code": "P410",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:12:57.743Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 86,
+    "fields": {
+        "name": "Arabic (UACE)",
+        "code": "P420",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:13:58.787Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 88,
+    "fields": {
+        "name": "German (UACE)",
+        "code": "P440",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:15:44.337Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 91,
+    "fields": {
+        "name": "Music (UACE)",
+        "code": "P449",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:17:17.878Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 92,
+    "fields": {
+        "name": "Clothing & Textiles",
+        "code": "P630",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:17:53.165Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 93,
+    "fields": {
+        "name": "Home Management",
+        "code": "P650",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:18:32.552Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 94,
+    "fields": {
+        "name": "Food & Nutrition",
+        "code": "P640",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:19:22.134Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 95,
+    "fields": {
+        "name": "Technical Drawing",
+        "code": "P660",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:20:26.086Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 96,
+    "fields": {
+        "name": "Woodwork",
+        "code": "P670",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:20:55.063Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 97,
+    "fields": {
+        "name": "Metalwork",
+        "code": "P680",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:21:28.883Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 98,
+    "fields": {
+        "name": "Building Construction",
+        "code": "P690",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:22:05.305Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 99,
+    "fields": {
+        "name": "Electricity",
+        "code": "P700",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:22:28.414Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 100,
+    "fields": {
+        "name": "Power & Energy",
+        "code": "P710",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:22:59.535Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 101,
+    "fields": {
+        "name": "Mechanical Engineering Craft Practice",
+        "code": "P720",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:23:51.849Z"
+    }
+},
+{
+    "model": "subjects.subject",
+    "pk": 102,
+    "fields": {
+        "name": "Auto Mechanics",
+        "code": "P730",
+        "level": "UACE",
+        "description": "",
+        "created_at": "2026-06-23T11:24:15.173Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 1,
+    "fields": {
+        "subject": 1,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/MATH.pdf",
+        "description": "PLE Mathematics Past Paper for 2025",
+        "uploaded_at": "2026-06-20T06:24:53.570Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 3,
+    "fields": {
+        "subject": 3,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/SST.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-20T06:29:16.917Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 5,
+    "fields": {
+        "subject": 4,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/SCIENCE_UK7UVMd.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-20T06:55:46.299Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 6,
+    "fields": {
+        "subject": 9,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/ENGLISH_T3s1WEf.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-20T19:57:11.500Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 7,
+    "fields": {
+        "subject": 1,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/SIPRO_MOCK_MTC.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:26:27.221Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 8,
+    "fields": {
+        "subject": 1,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P7_Maths_2023.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:26:57.412Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 9,
+    "fields": {
+        "subject": 1,
+        "year": 2022,
+        "paper": "Paper 1",
+        "pdf": "past_papers/M.T.C_P.7_TERM_1..pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:27:57.961Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 10,
+    "fields": {
+        "subject": 1,
+        "year": 2021,
+        "paper": "Paper 1",
+        "pdf": "past_papers/mock_math_2022.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:28:21.213Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 11,
+    "fields": {
+        "subject": 1,
+        "year": 2020,
+        "paper": "Paper 1",
+        "pdf": "past_papers/REAL_PLE_2023_MATH__shared_-_E-Learn.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:28:43.527Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 12,
+    "fields": {
+        "subject": 9,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/ENG__SET_NINE.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:29:22.183Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 13,
+    "fields": {
+        "subject": 9,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/ENG__PLE-1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:29:44.445Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 14,
+    "fields": {
+        "subject": 9,
+        "year": 2022,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P7_Kitgum_Municipal_English_PLE_Mock_II_2022.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:30:15.879Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 15,
+    "fields": {
+        "subject": 9,
+        "year": 2021,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P7_PRE_PLE_ENGLISH_SET_I_2023.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:30:55.177Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 16,
+    "fields": {
+        "subject": 9,
+        "year": 2020,
+        "paper": "Paper 1",
+        "pdf": "past_papers/2020_PLE_ENG.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:31:16.982Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 17,
+    "fields": {
+        "subject": 4,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P.7_SCI_PRE_MOCK_SET_TWO.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:32:27.712Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 18,
+    "fields": {
+        "subject": 4,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P.7_SCI_2.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:32:58.381Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 19,
+    "fields": {
+        "subject": 4,
+        "year": 2022,
+        "paper": "Paper 1",
+        "pdf": "past_papers/PPRIMARY_SEVEN_-_SET_14.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:33:28.034Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 20,
+    "fields": {
+        "subject": 4,
+        "year": 2021,
+        "paper": "Paper 1",
+        "pdf": "past_papers/p.7_PRE_PLE_SET_III.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:33:52.218Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 21,
+    "fields": {
+        "subject": 4,
+        "year": 2020,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P.7_SCIENCE_PLE_SET_1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:34:16.339Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 22,
+    "fields": {
+        "subject": 3,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/2020_PLE_SST.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:35:12.403Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 23,
+    "fields": {
+        "subject": 3,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P7__SST_exams_2023_set_iii.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:35:28.070Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 24,
+    "fields": {
+        "subject": 3,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/P7__SST_exams_2023_set_iii_RC9QHq1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:35:28.220Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 25,
+    "fields": {
+        "subject": 3,
+        "year": 2022,
+        "paper": "Paper 1",
+        "pdf": "past_papers/MOCK_P7_SST_NAMIREMBE_230830_152842.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:35:48.819Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 26,
+    "fields": {
+        "subject": 3,
+        "year": 2021,
+        "paper": "Paper 1",
+        "pdf": "past_papers/MARKING_GUIDE_SST_PRE-PLE_SET_I.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:36:04.635Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 27,
+    "fields": {
+        "subject": 3,
+        "year": 2020,
+        "paper": "Paper 1",
+        "pdf": "past_papers/KIBULI_P7_SST.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T11:36:42.259Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 28,
+    "fields": {
+        "subject": 61,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/UCE_History_1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:04:13.021Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 29,
+    "fields": {
+        "subject": 61,
+        "year": 2023,
+        "paper": "Paper 2",
+        "pdf": "past_papers/WAKISSHA_Mock_2023_History_of_East_Africa.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:05:52.790Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 30,
+    "fields": {
+        "subject": 61,
+        "year": 2022,
+        "paper": "Paper 3",
+        "pdf": "past_papers/S.4_MARKING_GUIDE_HISTORY_OF_SOUTH_AFRICA_SET_1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:06:28.578Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 31,
+    "fields": {
+        "subject": 20,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/UNEB_COMPUTER_PAST_PAPERS.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:08:57.028Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 32,
+    "fields": {
+        "subject": 20,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/UNEB_2023_SET_TWO_COMPUTER_STUDIES___SESESESESE.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:09:41.324Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 33,
+    "fields": {
+        "subject": 20,
+        "year": 2023,
+        "paper": "Paper 3",
+        "pdf": "past_papers/UCE-Wakisha_840-1_2023_230927_121913.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:10:27.473Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 34,
+    "fields": {
+        "subject": 15,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S.4-IRE-2-1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:14:32.855Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 35,
+    "fields": {
+        "subject": 15,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/S.4_IRE_PP2.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:15:04.342Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 36,
+    "fields": {
+        "subject": 15,
+        "year": 2023,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S.4_IRE_PP1_ELITE_EXAMS.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:15:41.334Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 37,
+    "fields": {
+        "subject": 17,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/KISWAHILI_O.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:16:55.172Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 38,
+    "fields": {
+        "subject": 17,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/KISWAHILI_PP3_REVISION.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:17:23.355Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 39,
+    "fields": {
+        "subject": 17,
+        "year": 2025,
+        "paper": "Paper 3",
+        "pdf": "past_papers/Kiswahili-Msingi_wa_Umilisi__EoY_Exam_2022.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:17:57.855Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 40,
+    "fields": {
+        "subject": 16,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S.4_LIT_PP1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:19:47.123Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 41,
+    "fields": {
+        "subject": 16,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/poetry_with_answers1-1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:20:09.293Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 42,
+    "fields": {
+        "subject": 34,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S.4_LUGANDA_1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:21:10.579Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 43,
+    "fields": {
+        "subject": 34,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/S.4_LUG_PP1_ELITE_EXAMS.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:21:37.778Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 44,
+    "fields": {
+        "subject": 48,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/LUMA_P2_O_LEVEL.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:22:48.353Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 45,
+    "fields": {
+        "subject": 35,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/UCE_lusoga_kayunga.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:23:42.404Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 46,
+    "fields": {
+        "subject": 35,
+        "year": 2024,
+        "paper": "Paper 2",
+        "pdf": "past_papers/UCE_MOCK_KAYUNGA_lusoga.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:24:18.344Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 47,
+    "fields": {
+        "subject": 21,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/2020_KINGS_COLLEGE_BUDO_S4_MATHEMATICS_PAPER_1_PRE_UNEB_TEST_2.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:25:27.393Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 48,
+    "fields": {
+        "subject": 21,
+        "year": 2023,
+        "paper": "Paper 2",
+        "pdf": "past_papers/Wakisha_Joint_Mock_Math_1_2023.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:25:56.787Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 49,
+    "fields": {
+        "subject": 24,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/UNEB_sample_Physics_paper_1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:27:32.849Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 50,
+    "fields": {
+        "subject": 24,
+        "year": 2025,
+        "paper": "Paper 2",
+        "pdf": "past_papers/uneb_2022_uce_physics_two.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:28:02.616Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 51,
+    "fields": {
+        "subject": 47,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/RUYORO_1_O.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:28:55.890Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 52,
+    "fields": {
+        "subject": 22,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S.4_AGRICULTURE_Revision_Paper1.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:29:58.834Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 53,
+    "fields": {
+        "subject": 22,
+        "year": 2025,
+        "paper": "Paper 2",
+        "pdf": "past_papers/S.4_AGRIC_STEM.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-23T13:30:21.085Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 54,
+    "fields": {
+        "subject": 17,
+        "year": 2024,
+        "paper": "Paper 1",
+        "pdf": "past_papers/KISWAHILI_O_heAa38L.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-25T04:23:09.965Z"
+    }
+},
+{
+    "model": "papers.pastpaper",
+    "pk": 55,
+    "fields": {
+        "subject": 15,
+        "year": 2025,
+        "paper": "Paper 1",
+        "pdf": "past_papers/S_QPET82P.4_IRE_PP1_ELITE_EXAMS.pdf",
+        "description": "",
+        "uploaded_at": "2026-06-25T12:33:24.167Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 1,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:05:37.852Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 2,
+    "fields": {
+        "paper": 3,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:14:47.557Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 3,
+    "fields": {
+        "paper": 1,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:14:54.786Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 4,
+    "fields": {
+        "paper": 1,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:22:26.079Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 5,
+    "fields": {
+        "paper": 1,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:22:34.425Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 6,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:27:54.860Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 7,
+    "fields": {
+        "paper": 3,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:30:00.515Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 8,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:47:37.717Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 9,
+    "fields": {
+        "paper": 3,
+        "user": 1,
+        "downloaded_at": "2026-06-20T07:54:37.366Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 10,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T10:42:33.567Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 11,
+    "fields": {
+        "paper": 3,
+        "user": 1,
+        "downloaded_at": "2026-06-20T10:42:41.594Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 13,
+    "fields": {
+        "paper": 1,
+        "user": 1,
+        "downloaded_at": "2026-06-20T10:49:26.311Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 14,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T10:54:24.693Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 15,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T13:35:50.270Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 16,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T18:54:59.875Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 17,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T18:59:45.863Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 18,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-20T19:18:26.866Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 19,
+    "fields": {
+        "paper": 3,
+        "user": 1,
+        "downloaded_at": "2026-06-20T19:19:50.259Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 20,
+    "fields": {
+        "paper": 6,
+        "user": 1,
+        "downloaded_at": "2026-06-20T21:17:07.421Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 21,
+    "fields": {
+        "paper": 3,
+        "user": null,
+        "downloaded_at": "2026-06-21T07:48:00.454Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 22,
+    "fields": {
+        "paper": 5,
+        "user": 1,
+        "downloaded_at": "2026-06-21T19:58:02.019Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 23,
+    "fields": {
+        "paper": 27,
+        "user": 1,
+        "downloaded_at": "2026-06-23T11:44:24.817Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 24,
+    "fields": {
+        "paper": 25,
+        "user": 1,
+        "downloaded_at": "2026-06-23T11:44:35.182Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 25,
+    "fields": {
+        "paper": 53,
+        "user": 4,
+        "downloaded_at": "2026-06-23T17:10:10.159Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 26,
+    "fields": {
+        "paper": 48,
+        "user": 5,
+        "downloaded_at": "2026-06-23T17:21:02.584Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 27,
+    "fields": {
+        "paper": 43,
+        "user": 5,
+        "downloaded_at": "2026-06-23T17:21:10.860Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 28,
+    "fields": {
+        "paper": 35,
+        "user": 5,
+        "downloaded_at": "2026-06-23T17:21:16.709Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 29,
+    "fields": {
+        "paper": 53,
+        "user": 4,
+        "downloaded_at": "2026-06-23T17:23:12.523Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 30,
+    "fields": {
+        "paper": 48,
+        "user": 4,
+        "downloaded_at": "2026-06-23T17:23:18.491Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 31,
+    "fields": {
+        "paper": 40,
+        "user": 4,
+        "downloaded_at": "2026-06-23T17:23:49.261Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 32,
+    "fields": {
+        "paper": 53,
+        "user": 5,
+        "downloaded_at": "2026-06-23T17:32:22.865Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 33,
+    "fields": {
+        "paper": 48,
+        "user": 5,
+        "downloaded_at": "2026-06-23T17:32:31.196Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 34,
+    "fields": {
+        "paper": 12,
+        "user": 5,
+        "downloaded_at": "2026-06-23T18:47:04.751Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 35,
+    "fields": {
+        "paper": 51,
+        "user": 5,
+        "downloaded_at": "2026-06-23T18:47:35.481Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 36,
+    "fields": {
+        "paper": 53,
+        "user": 7,
+        "downloaded_at": "2026-06-24T22:49:23.376Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 37,
+    "fields": {
+        "paper": 52,
+        "user": 7,
+        "downloaded_at": "2026-06-24T22:50:09.970Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 38,
+    "fields": {
+        "paper": 51,
+        "user": 7,
+        "downloaded_at": "2026-06-24T22:50:18.459Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 39,
+    "fields": {
+        "paper": 54,
+        "user": 8,
+        "downloaded_at": "2026-06-25T04:23:17.748Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 40,
+    "fields": {
+        "paper": 54,
+        "user": 7,
+        "downloaded_at": "2026-06-25T04:26:18.402Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 41,
+    "fields": {
+        "paper": 54,
+        "user": 8,
+        "downloaded_at": "2026-06-25T12:30:56.495Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 42,
+    "fields": {
+        "paper": 48,
+        "user": 8,
+        "downloaded_at": "2026-06-25T12:42:38.653Z"
+    }
+},
+{
+    "model": "downloads.download",
+    "pk": 43,
+    "fields": {
+        "paper": 23,
+        "user": 5,
+        "downloaded_at": "2026-06-25T12:44:57.927Z"
+    }
+}
+]
