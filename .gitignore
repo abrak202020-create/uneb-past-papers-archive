@@ -10,9 +10,6 @@ env/
 # Environment Variables
 .env
 
-# Media Files
-media/
-
 # Collected Static Files
 staticfiles/
 
